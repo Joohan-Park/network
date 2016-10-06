@@ -21,7 +21,7 @@ public class UDPTimeClient {
 		
 		//2. 요청패킷 전송
 		DatagramPacket sendPacket = new DatagramPacket("".getBytes(), 0,new InetSocketAddress(SERVER_IP,SERVER_PORT));
-		
+		Integer integer=1;
 		socket.send(sendPacket);
 		
 		//3. 시간 데이터 수신
@@ -40,9 +40,5 @@ public class UDPTimeClient {
 				socket.close();
 			}
 		}
-
-	
-
 	}
-
 }

@@ -30,14 +30,12 @@ public class UDPTimeServer {
 				DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, receivePacket.getAddress(),receivePacket.getPort());
 				socket.send(sendPacket);
 			}
-		}catch (IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
 			if (socket != null && socket.isClosed() == false) {
 				socket.close();
 			}
 		}
-
 	}
-
 }
